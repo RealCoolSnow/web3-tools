@@ -12,19 +12,19 @@ const Index = () => {
   const networkTest = () => {
     console.log('network')
     helloGet()
-      .then(res => {
+      .then((res) => {
         showAlert(res)
       })
-      .catch(err => {
+      .catch((err) => {
         showAlert(err)
       })
   }
   return (
-    <div className='flex flex-col items-center h-screen bg-gray-700'>
+    <div className="flex flex-col items-center h-screen bg-gray-700">
       <Logo />
-      <div className='bg-white w-3/4 p-4 rounded'>
+      <div className="bg-white w-3/4 p-4 rounded">
         <Counter />
-        <div onClick={networkTest} className='btn bg-blue-500 mt-2'>
+        <div onClick={networkTest} className="btn bg-blue-500 mt-2">
           Network Test
         </div>
       </div>
