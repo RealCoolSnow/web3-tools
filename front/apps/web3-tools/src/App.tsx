@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import routes from '@/router'
+import '@/locale'
 
 const App = () => {
   return (

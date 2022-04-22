@@ -1,3 +1,4 @@
+import { DefaultLanguage } from '@/locale'
 import { createModel } from '@rematch/core'
 import { RootModel } from '.'
 
@@ -7,7 +8,7 @@ export type CommonState = {
 
 export const common = createModel<RootModel>()({
   state: {
-    language: 'en'
+    language: DefaultLanguage
   } as CommonState,
   reducers: {
     SET_LANGUAGE(state, language: string) {
