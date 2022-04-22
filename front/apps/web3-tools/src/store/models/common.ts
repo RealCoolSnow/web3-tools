@@ -1,8 +1,11 @@
+import { createModel } from '@rematch/core'
+import { RootModel } from '.'
+
 export type CommonState = {
   language: string
 }
 
-export const common = {
+export const common = createModel<RootModel>()({
   state: {
     language: 'en'
   } as CommonState,
@@ -14,9 +17,9 @@ export const common = {
       }
     }
   },
-  effects: dispatch => ({
+  effects: (dispatch) => ({
     async setLanguage(payload: string) {
       dispatch.common.SET_LANGUAGE(payload)
     }
   })
-}
+})

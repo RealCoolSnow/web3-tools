@@ -22,6 +22,7 @@ const Index = () => {
   return (
     <div className="flex flex-col items-center h-screen bg-gray-700">
       <Logo />
+      {/* <img src="/logo.svg" className="w-40 h-40" alt="logo" /> */}
       <div className="bg-white w-3/4 p-4 rounded">
         <Counter />
         <div onClick={networkTest} className="btn bg-blue-500 mt-2">
