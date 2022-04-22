@@ -1,16 +1,18 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import routes from '@/router'
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Switch>
+      <Routes>
         {routes.map((route) => (
-          <Route exact key={route.path} path={route.path}>
-            <route.component />
-          </Route>
+          <Route
+            key={route.path}
+            path={route.path}
+            element={<route.component />}
+          />
         ))}
-      </Switch>
+      </Routes>
     </BrowserRouter>
   )
 }
